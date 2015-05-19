@@ -1,0 +1,28 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>TODO.COM</h1>
+    <p>
+        {{ entity.libelle }} :<br>
+        A faire avant le {{ entity.date|date('d-m-Y H:i:s') }}
+        
+    </p>
+
+    
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('tache') }}">
+            Retour
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('tache_edit', { 'id': entity.id }) }}">
+            Modifier
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+    <i>CopyRight @Yassine EL RHAZI</i>
+    <i>MSIM 2014/2016</i>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>TODO.COM</h1>
+    <p> A faire </p> :
+    <ul> 
+        {% for entity in entities %}
+            <li>  <a href="{{ path('tache_show', { 'id': entity.id }) }}">{{ entity.libelle }}</a></li> 
+               
+        {% endfor %}
+        
+</ul>
+        
+        <p> <a href="{{ path('tache_new') }}"></p>
+                Ajouter une tache
+            
+    
+    {% endblock %}

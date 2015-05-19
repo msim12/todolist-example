@@ -1,0 +1,4 @@
+services:
+#    to_do.example:
+#        class: Main\ToDoBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

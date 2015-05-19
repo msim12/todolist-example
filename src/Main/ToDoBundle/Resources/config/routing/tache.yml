@@ -1,0 +1,30 @@
+tache:
+    path:     /
+    defaults: { _controller: "ToDoBundle:Tache:index" }
+
+tache_show:
+    path:     /{id}/show
+    defaults: { _controller: "ToDoBundle:Tache:show" }
+
+tache_new:
+    path:     /new
+    defaults: { _controller: "ToDoBundle:Tache:new" }
+
+tache_create:
+    path:     /create
+    defaults: { _controller: "ToDoBundle:Tache:create" }
+    methods:  POST
+
+tache_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ToDoBundle:Tache:edit" }
+
+tache_update:
+    path:     /{id}/update
+    defaults: { _controller: "ToDoBundle:Tache:update" }
+    methods:  [POST, PUT]
+
+tache_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ToDoBundle:Tache:delete" }
+    methods:  [POST, DELETE]
